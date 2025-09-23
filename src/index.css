@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AyurSutra Design System - Ayurvedic Theme with Calming Colors
+All colors MUST be HSL for semantic consistency.
+*/
+
+@layer base {
+  :root {
+    /* Base colors inspired by Ayurvedic elements */
+    --background: 48 20% 98%;
+    --foreground: 140 10% 20%;
+
+    /* Card system with warm, earthy tones */
+    --card: 48 25% 97%;
+    --card-foreground: 140 10% 20%;
+
+    --popover: 48 25% 97%;
+    --popover-foreground: 140 10% 20%;
+
+    /* Primary colors - Forest Green (Kapha element) */
+    --primary: 142 60% 45%;
+    --primary-foreground: 48 20% 98%;
+    --primary-light: 142 50% 65%;
+
+    /* Secondary colors - Warm Earth (Pitta element) */
+    --secondary: 32 45% 85%;
+    --secondary-foreground: 140 10% 25%;
+
+    /* Muted colors - Soft neutrals */
+    --muted: 45 15% 92%;
+    --muted-foreground: 140 8% 50%;
+
+    /* Accent colors - Golden hues (Vata element) */
+    --accent: 45 65% 78%;
+    --accent-foreground: 140 10% 25%;
+
+    /* Semantic colors */
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 48 20% 98%;
+    --success: 142 60% 45%;
+    --success-foreground: 48 20% 98%;
+    --warning: 38 75% 60%;
+    --warning-foreground: 140 10% 20%;
+
+    /* UI elements */
+    --border: 45 20% 88%;
+    --input: 45 20% 88%;
+    --ring: 142 60% 45%;
+
+    /* Gradients for hero and special sections */
+    --gradient-primary: linear-gradient(135deg, hsl(142 60% 45%), hsl(142 50% 55%));
+    --gradient-secondary: linear-gradient(135deg, hsl(32 45% 85%), hsl(45 65% 78%));
+    --gradient-hero: linear-gradient(135deg, hsl(142 60% 45% / 0.1), hsl(32 45% 85% / 0.1));
+
+    /* Shadows with natural feel */
+    --shadow-soft: 0 2px 8px hsl(140 10% 20% / 0.08);
+    --shadow-medium: 0 4px 16px hsl(140 10% 20% / 0.12);
+    --shadow-large: 0 8px 32px hsl(140 10% 20% / 0.16);
+
+    /* Border radius following natural curves */
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode with deeper, richer Ayurvedic tones */
+    --background: 140 15% 8%;
+    --foreground: 48 15% 92%;
+
+    --card: 140 12% 12%;
+    --card-foreground: 48 15% 92%;
+
+    --popover: 140 12% 12%;
+    --popover-foreground: 48 15% 92%;
+
+    /* Primary remains forest green but lighter for dark mode */
+    --primary: 142 55% 55%;
+    --primary-foreground: 140 15% 8%;
+    --primary-light: 142 45% 65%;
+
+    /* Secondary with darker earth tones */
+    --secondary: 140 10% 18%;
+    --secondary-foreground: 48 15% 92%;
+
+    /* Muted with darker neutrals */
+    --muted: 140 8% 20%;
+    --muted-foreground: 48 10% 70%;
+
+    /* Accent with subdued golden tones */
+    --accent: 140 8% 22%;
+    --accent-foreground: 48 15% 92%;
+
+    /* Semantic colors adjusted for dark mode */
+    --destructive: 0 60% 60%;
+    --destructive-foreground: 140 15% 8%;
+    --success: 142 55% 55%;
+    --success-foreground: 140 15% 8%;
+    --warning: 38 70% 65%;
+    --warning-foreground: 140 15% 8%;
+
+    /* UI elements */
+    --border: 140 8% 25%;
+    --input: 140 8% 25%;
+    --ring: 142 55% 55%;
+
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(142 55% 55%), hsl(142 45% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(140 10% 18%), hsl(140 8% 22%));
+    --gradient-hero: linear-gradient(135deg, hsl(142 55% 55% / 0.15), hsl(140 10% 18% / 0.15));
+
+    /* Darker shadows */
+    --shadow-soft: 0 2px 8px hsl(140 15% 5% / 0.3);
+    --shadow-medium: 0 4px 16px hsl(140 15% 5% / 0.4);
+    --shadow-large: 0 8px 32px hsl(140 15% 5% / 0.5);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+    font-feature-settings: "cv11", "ss01";
+    font-variation-settings: "opsz" 32;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Ayurvedic-inspired animations */
+  .animate-gentle-float {
+    animation: gentle-float 6s ease-in-out infinite;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Natural hover effects */
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-medium);
+    }
+  }
+
+  /* Gradient backgrounds */
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .bg-gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  /* Custom scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 3px;
+  }
+}
+
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
