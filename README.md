@@ -2,8 +2,6 @@
 
 🌿 **Ancient Wisdom, Modern Technology** - A comprehensive Ayurvedic patient management platform built with React, TypeScript, and cutting-edge healthcare technology.
 
-![AyurSutra Dashboard](src/assets/hero-ayurveda.jpg)
-
 ## ✨ Features
 
 - **Multi-Role Platform**: Patient, Practitioner, and Admin dashboards
@@ -160,6 +158,3 @@ src/
 
 ---
 
-**Built with ❤️ for the Ayurvedic community**
-
-*This is a demo platform showcasing modern healthcare technology applied to traditional Ayurvedic medicine. All data is mocked for demonstration purposes.*
